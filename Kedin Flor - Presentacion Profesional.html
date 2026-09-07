@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kedin Flor — Desarrollador Full-Stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #EFF1EC;
+    --panel: #131A18;
+    --panel-text: #F1F4F1;
+    --ink: #12181A;
+    --muted: #52605A;
+    --teal: #1E7A63;
+    --teal-tint: #DCEBE4;
+    --slate: #3E5C76;
+    --slate-tint: #DEE5EC;
+    --amber: #B8792A;
+    --amber-tint: #F3E5CF;
+    --mint: #7FD8B4;
+    --line: #CBD1C8;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap{
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    background: var(--panel);
+    color: var(--panel-text);
+    padding: 5.5rem 1.5rem 3.5rem;
+  }
+
+  .hero .wrap{ max-width: 640px; }
+
+  .connector{
+    width: 2px;
+    height: 2.75rem;
+    background: var(--mint);
+    margin: 0 0 2.25rem 0;
+    transform-origin: top;
+    animation: draw 0.9s ease-out;
+  }
+
+  @keyframes draw{
+    from{ transform: scaleY(0); }
+    to{ transform: scaleY(1); }
+  }
+
+  .hero h1{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 2.75rem;
+    line-height: 1.12;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    color: var(--panel-text);
+  }
+
+  .hero p.role{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--mint);
+    margin: 0 0 2.2rem 0;
+  }
+
+  .hero .lede{
+    font-size: 1.12rem;
+    max-width: 38ch;
+    color: #C7CFC9;
+    margin: 0 0 3rem 0;
+  }
+
+  .facts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    border-top: 1px solid #2A322F;
+    padding-top: 1.75rem;
+  }
+
+  .facts div{ min-width: 0; }
+
+  .facts .label{
+    font-size: 0.8rem;
+    color: #8A958F;
+    margin: 0 0 0.35rem 0;
+  }
+
+  .facts .value{
+    font-size: 1.02rem;
+    color: var(--panel-text);
+    margin: 0;
+  }
+
+  /* ---------- ACERCA DE MÍ ---------- */
+
+  .acerca{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .acerca-grid{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .acerca .foto{
+    border-top: 3px solid var(--teal);
+  }
+
+  .acerca .foto img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.03);
+  }
+
+  .acerca-text h2{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0 0 1rem 0;
+    color: var(--teal);
+  }
+
+  .acerca-text p{
+    margin: 0 0 1rem 0;
+  }
+
+  .acerca-text p:last-child{ margin-bottom: 0; }
+
+  /* ---------- PERFIL ---------- */
+
+  .perfil{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .perfil-grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+  }
+
+  .perfil h2{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .perfil p{
+    margin: 0 0 1rem 0;
+  }
+
+  .perfil p:last-child{ margin-bottom: 0; }
+
+  /* ---------- COLUMNAS ---------- */
+
+  .columns{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .columns-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .col{
+    border-top: 3px solid var(--teal);
+    padding: 0 1.5rem 0 0;
+  }
+
+  .col + .col{
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--line);
+  }
+
+  .col.slate{ border-top-color: var(--slate); }
+  .col.amber{ border-top-color: var(--amber); }
+
+  .col h3{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 1.3rem 0 0.8rem 0;
+  }
+
+  .col.slate h3{ color: var(--slate); }
+  .col.amber h3{ color: var(--amber); }
+  .col:not(.slate):not(.amber) h3{ color: var(--teal); }
+
+  .col p{
+    font-size: 0.96rem;
+    margin: 0 0 1rem 0;
+    color: var(--ink);
+  }
+
+  ul.tags{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  ul.tags li{
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--teal);
+    background: var(--teal-tint);
+    border-radius: 3px;
+    padding: 0.28rem 0.6rem;
+  }
+
+  .col.slate ul.tags li{ color: var(--slate); background: var(--slate-tint); }
+  .col.amber ul.tags li{ color: var(--amber); background: var(--amber-tint); }
+
+  /* ---------- PROYECTOS ---------- */
+
+  .proyectos{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .proyectos-grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+  }
+
+  .proyectos h2{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .proyecto-list .proyecto{
+    padding: 1.6rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .proyecto-list .proyecto:first-child{
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .proyecto h3{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 0 0.35rem 0;
+    color: var(--ink);
+  }
+
+  .proyecto .stack{
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--teal);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.6rem 0;
+  }
+
+  .proyecto p:not(.stack){
+    margin: 0;
+    font-size: 0.96rem;
+    color: var(--ink);
+  }
+
+  /* ---------- FUNCIONES ---------- */
+
+  .funciones{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .funciones-grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+  }
+
+  .funciones h2{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  .funciones ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: fn;
+  }
+
+  .funciones li{
+    counter-increment: fn;
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    gap: 0.75rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .funciones li:first-child{ border-top: none; padding-top: 0; }
+
+  .funciones li::before{
+    content: counter(fn);
+    font-family: 'IBM Plex Serif', serif;
+    color: var(--teal);
+    font-size: 0.95rem;
+  }
+
+  .funciones li p{ margin: 0; font-size: 0.96rem; }
+
+  /* ---------- HABILIDADES ---------- */
+
+  .habilidades{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .habilidades-grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .habilidades h2{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  ul.pills{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  ul.pills li{
+    font-size: 0.92rem;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* ---------- TRAYECTORIA SALARIAL ---------- */
+
+  .salario{
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .salario-grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1.5rem;
+  }
+
+  .salario h2{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .salario .note{
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0 0 1.8rem 0;
+    max-width: 34ch;
+  }
+
+  .bar-row{
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.4rem;
+  }
+
+  .bar-row:last-child{ margin-bottom: 0; }
+
+  .bar-row .level{
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .bar-track{
+    position: relative;
+    height: 8px;
+    background: var(--line);
+    border-radius: 2px;
+  }
+
+  .bar-fill{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+    background: var(--teal);
+  }
+
+  .bar-row.mid .bar-fill{ background: var(--slate); }
+  .bar-row.senior .bar-fill{ background: var(--amber); }
+
+  .bar-row .range{
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* ---------- CLOSING ---------- */
+
+  .closing{
+    background: var(--panel);
+    color: var(--panel-text);
+    padding: 3.5rem 1.5rem;
+  }
+
+  .closing .wrap{ max-width: 640px; }
+
+  .closing p{
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--panel-text);
+  }
+
+  .closing span{
+    color: var(--mint);
+  }
+
+  footer{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 2.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 700px){
+    .columns-grid{ grid-template-columns: 1fr; }
+    .col + .col{
+      margin-left: 0;
+      padding-left: 0;
+      border-left: none;
+      border-top: 3px solid var(--slate);
+      margin-top: 2rem;
+      padding-top: 0;
+    }
+    .col + .col.amber{ border-top-color: var(--amber); }
+    .col h3{ margin-top: 1.3rem; }
+  }
+
+  @media (max-width: 560px){
+    .hero{ padding: 3.5rem 1.25rem 2.75rem; }
+    .hero h1{ font-size: 2.15rem; }
+    .facts{ grid-template-columns: 1fr; gap: 1rem; }
+    .perfil, .columns, .proyectos, .funciones, .habilidades, .salario, .acerca{ padding: 2.5rem 1.25rem; }
+    .acerca-grid{ grid-template-columns: 1fr; gap: 1.25rem; }
+    .acerca .foto{ max-width: 220px; }
+    .perfil-grid, .proyectos-grid, .funciones-grid, .habilidades-grid, .salario-grid{ grid-template-columns: 1fr; gap: 0.6rem; }
+    .funciones li{ grid-template-columns: 1.5rem 1fr; }
+    .bar-row{ grid-template-columns: 80px 1fr; }
+    .bar-row .range{ grid-column: 1 / -1; text-align: left; margin-top: 0.35rem; }
+    .closing{ padding: 2.75rem 1.25rem; }
+    .closing p{ font-size: 1.2rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .connector{ animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="connector" aria-hidden="true"></div>
+    <h1>Kedin Flor</h1>
+    <p class="role">Desarrollador Full-Stack</p>
+    <p class="lede">
+      Conecta frontend y backend para construir productos web completos,
+      con una base sólida en arquitecturas modulares y una curiosidad
+      activa por la inteligencia artificial aplicada al desarrollo.
+    </p>
+    <div class="facts">
+      <div>
+        <p class="label">Campo</p>
+        <p class="value">Ingeniería Informática</p>
+      </div>
+      <div>
+        <p class="label">Código ocupación</p>
+        <p class="value">25130.028</p>
+      </div>
+      <div>
+        <p class="label">Nivel actual</p>
+        <p class="value">Junior en formación</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="acerca">
+  <div class="wrap acerca-grid">
+    <div class="foto">
+      <img src="kedin-photo.jpg" alt="Foto de Kedin Flor">
+    </div>
+    <div class="acerca-text">
+      <h2>Acerca de mí</h2>
+      <p>
+        Es un gusto presentarles a Kedin Flor, desarrollador full-stack
+        especializado en la integración de frontend y backend para
+        construir productos web completos y funcionales.
+      </p>
+      <p>
+        Se desempeña en el campo del desarrollo de software, con foco
+        en arquitecturas modulares construidas sobre Next.js y
+        PostgreSQL, y con experiencia real integrando bases de datos
+        no relacionales como MongoDB. Su fortaleza central está en
+        diseñar, desarrollar e implementar la arquitectura de
+        aplicaciones de principio a fin: no solo escribe código, sino
+        que resuelve el reto de lograr que frontend y backend se
+        comuniquen de forma clara y eficiente.
+      </p>
+      <p>
+        Lo que hace interesante su perfil es justamente ese punto de
+        partida: no llega a la inteligencia artificial como una moda
+        del mercado, sino como alguien que ya construyó e integró
+        soluciones con ella, y que ahora busca llevarlo más lejos.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="perfil">
+  <div class="wrap perfil-grid">
+    <h2>Perfil</h2>
+    <div>
+      <p>
+        El desarrollador full-stack investiga, analiza, diseña, programa
+        y modifica sitios web, aplicaciones y otros medios interactivos
+        que combinan texto, gráficos, datos y componentes visuales.
+        Puede desempeñarse en organizaciones de tecnología, firmas
+        consultoras y departamentos de tecnología en empresas del
+        sector público y privado.
+      </p>
+      <p>
+        Kedin se ubica dentro de ese perfil con una identidad propia:
+        más que dominar herramientas por separado, lo que lo motiva es
+        el punto exacto donde frontend y backend deben comunicarse
+        correctamente entre sí.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="wrap">
+    <div class="columns-grid">
+      <div class="col">
+        <h3>Fortalezas</h3>
+        <p>
+          Arquitecturas modulares sobre Next.js y PostgreSQL. Diseño de
+          APIs y middleware que conectan ambas capas del sistema
+          siguiendo buenas prácticas de usabilidad.
+        </p>
+        <ul class="tags">
+          <li>Next.js</li>
+          <li>PostgreSQL</li>
+          <li>APIs REST</li>
+          <li>Arquitectura modular</li>
+        </ul>
+      </div>
+      <div class="col slate">
+        <h3>En desarrollo</h3>
+        <p>
+          Adaptación al modelo no relacional de MongoDB, consolidación
+          del hábito de pruebas de calidad, y fortalecimiento del
+          trabajo en equipo bajo metodologías ágiles como Scrum.
+        </p>
+        <ul class="tags">
+          <li>MongoDB</li>
+          <li>Pruebas unitarias</li>
+          <li>Scrum</li>
+        </ul>
+      </div>
+      <div class="col amber">
+        <h3>Explorando</h3>
+        <p>
+          Integración de IA en el desarrollo de software. Ya conectó
+          modelos de lenguaje con bases de datos y resolvió el reto de
+          mantener el contexto en las consultas.
+        </p>
+        <ul class="tags">
+          <li>Gemini</li>
+          <li>Groq</li>
+          <li>IA + Base de datos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="proyectos">
+  <div class="wrap proyectos-grid">
+    <h2>Proyectos</h2>
+    <div class="proyecto-list">
+      <div class="proyecto">
+        <h3>Cronopay</h3>
+        <p class="stack">Next.js · Supabase</p>
+        <p>
+          Gestor de pagos recurrentes que notifica a los usuarios sobre
+          suscripciones activas y deudas pendientes, evitando cobros o
+          vencimientos inesperados.
+        </p>
+      </div>
+      <div class="proyecto">
+        <h3>Convercauca Website</h3>
+        <p class="stack">Sitio corporativo</p>
+        <p>
+          Página web para una empresa dedicada a la venta de productos
+          derivados del plástico.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="funciones">
+  <div class="wrap funciones-grid">
+    <h2>Funciones clave</h2>
+    <ol>
+      <li>
+        <p>
+          Diseñar, desarrollar e implementar la arquitectura de las
+          aplicaciones — la función que más disfruta, porque exige que
+          frontend y backend trabajen como un solo sistema coherente.
+        </p>
+      </li>
+      <li>
+        <p>
+          Analizar, diseñar y desarrollar sitios web aplicando lenguajes
+          de programación y su interconexión con entornos operativos,
+          según requisitos técnicos del proyecto.
+        </p>
+      </li>
+      <li>
+        <p>
+          Controlar la calidad del servicio y probar la solución de
+          software según estándares técnicos — el área que está
+          fortaleciendo de forma activa.
+        </p>
+      </li>
+      <li>
+        <p>
+          Establecer y evaluar los requisitos de la solución de software
+          de acuerdo con estándares y metodologías de análisis.
+        </p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="habilidades">
+  <div class="wrap habilidades-grid">
+    <h2>Habilidades</h2>
+    <ul class="pills">
+      <li>Comprensión de lectura</li>
+      <li>Comunicación asertiva</li>
+      <li>Pensamiento crítico</li>
+      <li>Evaluación y control de actividades</li>
+      <li>Análisis de necesidades</li>
+      <li>Diseño de tecnología</li>
+      <li>Programación</li>
+    </ul>
+  </div>
+</div>
+
+<div class="salario">
+  <div class="wrap salario-grid">
+    <h2>Trayectoria</h2>
+    <div>
+      <p class="note">
+        Rango salarial de referencia del rol en el mercado local, según
+        años de experiencia.
+      </p>
+
+      <div class="bar-row">
+        <span class="level">Junior</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="left: 16.7%; width: 15.3%;"></div>
+        </div>
+        <span class="range">$2.5M – $4.8M</span>
+      </div>
+
+      <div class="bar-row mid">
+        <span class="level">Semi-Senior</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="left: 33.3%; width: 20%;"></div>
+        </div>
+        <span class="range">$5M – $8M</span>
+      </div>
+
+      <div class="bar-row senior">
+        <span class="level">Senior</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="left: 60%; width: 40%;"></div>
+        </div>
+        <span class="range">$9M – $15M+</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="closing">
+  <div class="wrap">
+    <p>
+      Un perfil que crece <span>de lo técnico a lo integral</span> —
+      sólido hoy en backend y arquitectura, cada vez más completo en
+      equipo, calidad e inteligencia artificial.
+    </p>
+  </div>
+</div>
+
+<footer>Proyección profesional — Ingeniería Informática · Salarios en COP</footer>
+
+</body>
+</html>
