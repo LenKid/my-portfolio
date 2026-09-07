@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedin Sebastian Valencia Flor — Desarrollador Full-Stack</title>
+  <meta name="description" content="Portfolio profesional de Kedin Sebastian Valencia Flor, desarrollador full-stack especializado en Next.js, PostgreSQL e inteligencia artificial.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" aria-hidden="true">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Cursor Follower -->
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">KF</span>
+        <span>Kedin Sebastian</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#contact" class="nav-cta">Contacto</a></li>
+      </ul>
+      
+      <button class="nav-mobile-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="pulse"></span>
+            Disponible para proyectos
+          </div>
+          
+          <h1>
+            Hola, soy<br>
+            <span class="gradient-text">Kedin Sebastian Valencia Flor</span>
+          </h1>
+          
+          <p class="tagline">Desarrollador Full-Stack</p>
+          
+          <p class="tagline">
+            Conecta frontend y backend para construir productos web completos,
+            con una base sólida en arquitecturas modulares y una curiosidad
+            activa por la inteligencia artificial aplicada al desarrollo.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              Ver Proyectos
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Contactar
+            </a>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-value" data-target="2" data-suffix="+">0+</div>
+              <div class="stat-label">Proyectos completados</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" data-target="100" data-suffix="%">0%</div>
+              <div class="stat-label">Compromiso</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value" data-target="24" data-suffix="/7">0/7</div>
+              <div class="stat-label">Aprendizaje continuo</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="kedin-photo.jpg" alt="Kedin Flor" class="hero-image">
+          </div>
+          
+          <div class="floating-card card-1">
+            <div class="card-icon">⚡</div>
+            <div class="card-text">Full-Stack</div>
+            <div class="card-sub">Next.js + Node.js</div>
+          </div>
+          
+          <div class="floating-card card-2">
+            <div class="card-icon">🤖</div>
+            <div class="card-text">AI Integration</div>
+            <div class="card-sub">Gemini + Groq</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-label">Sobre mí</div>
+          <h2 class="section-title">Construyendo el futuro del web</h2>
+          
+          <div class="about-text">
+            <p>
+              Es un gusto presentarles a Kedin Sebastian Valencia Flor, desarrollador full-stack
+              especializado en la integración de frontend y backend para
+              construir productos web completos y funcionales.
+            </p>
+            <p>
+              Se desempeña en el campo del desarrollo de software, con foco
+              en arquitecturas modulares construidas sobre Next.js y
+              PostgreSQL, y con experiencia real integrando bases de datos
+              no relacionales como MongoDB.
+            </p>
+            <p>
+              Lo que hace interesante su perfil es justamente ese punto de
+              partida: no llega a la inteligencia artificial como una moda
+              del mercado, sino como alguien que ya construyó e integró
+              soluciones con ella.
+            </p>
+          </div>
+        </div>
+        
+        <div class="about-features animate-stagger">
+          <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <div>
+              <div class="feature-title">Arquitectura Modular</div>
+              <div class="feature-desc">Diseño de sistemas escalables y mantenibles</div>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">🔗</div>
+            <div>
+              <div class="feature-title">Full-Stack Integration</div>
+              <div class="feature-desc">Conexión perfecta entre frontend y backend</div>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">🧠</div>
+            <div>
+              <div class="feature-title">AI Developer</div>
+              <div class="feature-desc">Integración de modelos de lenguaje</div>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <div>
+              <div class="feature-title">Data-Driven</div>
+              <div class="feature-desc">Decisiones basadas en métricas y datos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label">Habilidades</div>
+      <h2 class="section-title">Stack tecnológico</h2>
+      
+      <div class="skills-grid animate-stagger">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">⚛️</div>
+            <span class="skill-level">Expert</span>
+          </div>
+          <h3 class="skill-title">Frontend</h3>
+          <p class="skill-desc">Interfaces modernas, rápidas y responsivas con las últimas tecnologías.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">🖥️</div>
+            <span class="skill-level">Expert</span>
+          </div>
+          <h3 class="skill-title">Backend</h3>
+          <p class="skill-desc">APIs robustas, autenticación segura y lógica de negocio escalable.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Supabase</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">🤖</div>
+            <span class="skill-level">Avanzado</span>
+          </div>
+          <h3 class="skill-title">Inteligencia Artificial</h3>
+          <p class="skill-desc">Integración de modelos de lenguaje y soluciones de IA en aplicaciones.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Gemini</span>
+            <span class="skill-tag">Groq</span>
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">Prompt Engineering</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">🗄️</div>
+            <span class="skill-level">Avanzado</span>
+          </div>
+          <h3 class="skill-title">Bases de Datos</h3>
+          <p class="skill-desc">Diseño de esquemas, optimización de consultas y manejo de datos.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Supabase</span>
+            <span class="skill-tag">Prisma</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">🛠️</div>
+            <span class="skill-level">Intermedio</span>
+          </div>
+          <h3 class="skill-title">DevOps</h3>
+          <p class="skill-desc">Despliegue continuo, control de versiones y automatización.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="skill-icon">💡</div>
+            <span class="skill-level">Soft Skills</span>
+          </div>
+          <h3 class="skill-title">Habilidades Blandas</h3>
+          <p class="skill-desc">Trabajo en equipo, comunicación efectiva y resolución de problemas.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Scrum</span>
+            <span class="skill-tag">Pensamiento Crítico</span>
+            <span class="skill-tag">Comunicación</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">Proyectos</div>
+      <h2 class="section-title">Trabajo reciente</h2>
+      
+      <div class="projects-grid animate-stagger">
+        <div class="project-card">
+          <div class="project-number">Proyecto 01</div>
+          <h3 class="project-title">Cronopay</h3>
+          <div class="project-stack">
+            <span>Next.js</span>
+            <span>Supabase</span>
+            <span>PostgreSQL</span>
+          </div>
+          <p class="project-desc">
+            Gestor de pagos recurrentes que notifica a los usuarios sobre
+            suscripciones activas y deudas pendientes, evitando cobros o
+            vencimientos inesperados.
+          </p>
+          <a href="#" class="project-link">
+            Ver más
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-number">Proyecto 02</div>
+          <h3 class="project-title">Convercauca Website</h3>
+          <div class="project-stack">
+            <span>Sitio Corporativo</span>
+            <span>HTML/CSS</span>
+          </div>
+          <p class="project-desc">
+            Página web para una empresa dedicada a la venta de productos
+            derivados del plástico. Diseño profesional y responsive.
+          </p>
+          <a href="#" class="project-link">
+            Ver más
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="experience-grid">
+        <div class="experience-content">
+          <div class="section-label">Experiencia</div>
+          <h2 class="section-title">Mi trayectoria</h2>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Actualidad</div>
+              <h3 class="timeline-title">Desarrollador Full-Stack</h3>
+              <p class="timeline-company">Freelance / Proyectos Propios</p>
+              <p class="timeline-desc">
+                Desarrollo de aplicaciones web completas con Next.js, PostgreSQL
+                e integración de inteligencia artificial.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2024</div>
+              <h3 class="timeline-title">Ingeniería Informática</h3>
+              <p class="timeline-company">Formación Académica</p>
+              <p class="timeline-desc">
+                Cursando ingeniería con foco en desarrollo de software,
+                arquitectura de sistemas e inteligencia artificial.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2023</div>
+              <h3 class="timeline-title">Primeros Proyectos</h3>
+              <p class="timeline-company">Inicio en el Desarrollo Web</p>
+              <p class="timeline-desc">
+                Primeros pasos en el desarrollo web con HTML, CSS y JavaScript,
+                creando sitios web estáticos y dinámicos.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-matrix">
+          <h3 class="matrix-title">Nivel de Habilidades</h3>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">Next.js / React</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="85"></div>
+            </div>
+            <span class="matrix-percent">85%</span>
+          </div>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">Node.js</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="80"></div>
+            </div>
+            <span class="matrix-percent">80%</span>
+          </div>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">PostgreSQL</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="75"></div>
+            </div>
+            <span class="matrix-percent">75%</span>
+          </div>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">TypeScript</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="70"></div>
+            </div>
+            <span class="matrix-percent">70%</span>
+          </div>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">AI Integration</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="65"></div>
+            </div>
+            <span class="matrix-percent">65%</span>
+          </div>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">MongoDB</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="55"></div>
+            </div>
+            <span class="matrix-percent">55%</span>
+          </div>
+          
+          <div class="matrix-row">
+            <span class="matrix-skill">DevOps</span>
+            <div class="matrix-bar">
+              <div class="matrix-fill" data-width="50"></div>
+            </div>
+            <span class="matrix-percent">50%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Functions Section -->
+  <section class="functions section" id="functions">
+    <div class="container">
+      <div class="section-label">Funciones</div>
+      <h2 class="section-title">Lo que hago</h2>
+      
+      <div class="functions-grid animate-stagger">
+        <div class="function-card">
+          <div class="function-number">01</div>
+          <div class="function-content">
+            <h3 class="function-title">Arquitectura de Aplicaciones</h3>
+            <p class="function-desc">
+              Diseñar, desarrollar e implementar la arquitectura de las
+              aplicaciones — la función que más disfruta, porque exige que
+              frontend y backend trabajen como un solo sistema coherente.
+            </p>
+          </div>
+        </div>
+        
+        <div class="function-card">
+          <div class="function-number">02</div>
+          <div class="function-content">
+            <h3 class="function-title">Desarrollo Web Full-Stack</h3>
+            <p class="function-desc">
+              Analizar, diseñar y desarrollar sitios web aplicando lenguajes
+              de programación y su interconexión con entornos operativos,
+              según requisitos técnicos del proyecto.
+            </p>
+          </div>
+        </div>
+        
+        <div class="function-card">
+          <div class="function-number">03</div>
+          <div class="function-content">
+            <h3 class="function-title">Control de Calidad</h3>
+            <p class="function-desc">
+              Controlar la calidad del servicio y probar la solución de
+              software según estándares técnicos — el área que está
+              fortaleciendo de forma activa.
+            </p>
+          </div>
+        </div>
+        
+        <div class="function-card">
+          <div class="function-number">04</div>
+          <div class="function-content">
+            <h3 class="function-title">Análisis de Requisitos</h3>
+            <p class="function-desc">
+              Establecer y evaluar los requisitos de la solución de software
+              de acuerdo con estándares y metodologías de análisis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="section-label">Contacto</div>
+          <h2 class="section-title">Trabajemos juntos</h2>
+          
+          <p class="contact-text">
+            ¿Tienes un proyecto en mente? ¿Necesitas un desarrollador full-stack
+            para tu equipo? ¡Me encantaría escuchar tu idea!
+          </p>
+          
+          <div class="contact-links">
+            <a href="mailto:kvalenciaflor@gmail.com" class="contact-link">
+              <div class="contact-link-icon">📧</div>
+              <div class="contact-link-text">
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">kvalenciaflor@gmail.com</div>
+              </div>
+            </a>
+            
+            <a href="https://github.com/LenKid" target="_blank" class="contact-link">
+              <div class="contact-link-icon">🐙</div>
+              <div class="contact-link-text">
+                <div class="contact-link-label">GitHub</div>
+                <div class="contact-link-value">@LenKid</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="name">Nombre</label>
+            <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="message">Mensaje</label>
+            <textarea id="message" class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-icon">KF</span>
+          <span>Kedin Sebastian Valencia Flor</span>
+        </div>
+        
+        <div class="footer-social">
+          <a href="https://github.com/LenKid" target="_blank" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="mailto:kvalenciaflor@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 Kedin Sebastian Valencia Flor · Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Volver arriba">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
