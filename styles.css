@@ -1019,6 +1019,35 @@ body {
   color: var(--text-secondary);
 }
 
+/* ---------- VIDEO ---------- */
+.video-section {
+  background: var(--bg-alt);
+}
+
+.video-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 177.78%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+}
+
 /* ---------- CONTACT ---------- */
 .contact {
   background: linear-gradient(180deg, var(--bg-alt) 0%, var(--emerald-50) 100%);
