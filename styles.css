@@ -1053,6 +1053,12 @@ body {
   align-items: start;
 }
 
+.media-grid-single {
+  grid-template-columns: 1fr;
+  max-width: 400px;
+  margin: var(--space-2xl) auto 0;
+}
+
 .media-card {
   background: var(--surface);
   border-radius: var(--radius-xl);
@@ -1157,6 +1163,12 @@ body {
 @media (max-width: 768px) {
   .media-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .media-grid-single {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: var(--space-2xl) auto 0;
   }
   
   .video-container {
