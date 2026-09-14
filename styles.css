@@ -910,6 +910,28 @@ body {
   color: var(--text-secondary);
 }
 
+.timeline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--emerald-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.timeline-link:hover {
+  background: var(--emerald-100);
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
 /* Skills Matrix */
 .skills-matrix {
   background: var(--surface);
