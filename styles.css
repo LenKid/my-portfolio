@@ -1041,14 +1041,52 @@ body {
   color: var(--text-secondary);
 }
 
-/* ---------- VIDEO ---------- */
+/* ---------- VIDEO & MEDIA ---------- */
 .video-section {
   background: var(--bg-alt);
 }
 
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.media-card {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.media-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.media-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--emerald-100);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.media-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
 .video-wrapper {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 .video-container {
@@ -1056,8 +1094,8 @@ body {
   padding-bottom: 177.78%;
   height: 0;
   overflow: hidden;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
 }
 
@@ -1067,7 +1105,63 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.presentation-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  flex: 1;
+}
+
+.presentation-preview {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--emerald-100), var(--emerald-200));
   border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  color: var(--emerald-600);
+}
+
+.presentation-filename {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  word-break: break-all;
+}
+
+.presentation-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+  max-width: 280px;
+}
+
+.presentation-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .video-container {
+    padding-bottom: 177.78%;
+  }
 }
 
 /* ---------- CONTACT ---------- */
